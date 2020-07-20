@@ -183,6 +183,17 @@ div#d-day-section {
 	}
 }
 
+div#shareButton-container {
+    display: flex; align-items: center; justify-content: space-around; flex-wrap: wrap;
+	
+	width: 200px; margin: auto; height: 5rem;
+	@media (min-width: 576px) { width: $ratio-10-12; height: auto; }
+	@media (min-width: 768px) { width: $ratio-8-12; }
+	@media (min-width: 992px) { width: $ratio-6-12; }
+
+}
+
+
 div#goToSignButton-container { 
 	display: inline-block; text-align: center; 
 	width: $ratio-9-12; max-width: 16rem;
@@ -192,12 +203,3 @@ div#goToSignButton-container {
 	object[type="image/svg+xml"] { width: 100%; pointer-events: none; }
 }
 
-
-
-
-.skew-container {
-	transform-origin: left bottom;
-	transform: skew(15deg) translate(0, 100%);
-	
-	img { width: 100%; height: auto; }
-}

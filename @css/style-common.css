@@ -172,7 +172,7 @@ div#d-day-section {
       margin-top: -1rem;
       margin-bottom: 4rem;
       width: 100%;
-      transform: scale(0.75) skew(8deg, -14deg); } }
+      transform: scale(0.6) skew(8deg, -14deg); } }
   @media (min-width: 992px) {
     div#d-day-section {
       margin-top: -2rem;
@@ -187,6 +187,25 @@ div#d-day-section {
     display: inline-block;
     vertical-align: middle; }
 
+div#shareButton-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  width: 200px;
+  margin: auto;
+  height: 5rem; }
+  @media (min-width: 576px) {
+    div#shareButton-container {
+      width: 83.33333%;
+      height: auto; } }
+  @media (min-width: 768px) {
+    div#shareButton-container {
+      width: 66.66667%; } }
+  @media (min-width: 992px) {
+    div#shareButton-container {
+      width: 50%; } }
+
 div#goToSignButton-container {
   display: inline-block;
   text-align: center;
@@ -199,10 +218,3 @@ div#goToSignButton-container {
   div#goToSignButton-container object[type="image/svg+xml"] {
     width: 100%;
     pointer-events: none; }
-
-.skew-container {
-  transform-origin: left bottom;
-  transform: skew(15deg) translate(0, 100%); }
-  .skew-container img {
-    width: 100%;
-    height: auto; }

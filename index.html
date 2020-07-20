@@ -35,6 +35,9 @@
 
 			<!-- clipboard.js -->
 <!--			<script src="./@library/clipboard.min.js"></script>-->
+		
+			<!-- Kakaotalk SDK for share button -->
+			<script src="https://developers.kakao.com/sdk/js/kakao.min.js"></script>
 
 
 		<!-- favicons -->
@@ -55,12 +58,12 @@
 			<meta property="og:type" content="website" />
 			<meta property="og:title" content="301-번째 국회의원, 《차별금지법》을 발의하다" />
 			<meta property="og:description" content="10만 명의 국회 청원 서명에 동참해서,《차별금지법》을 발의하는 301-번째 국회의원이 되어주세요." />
-			<meta property="og:image" content="http://gihoek.com/image/thumbnail-1200x630.jpg" />
+			<meta property="og:image" content="https://studiohalf-bottle.github.io/301-MP/@asset/image/thumbnail_1200x630.png" />
 			<meta property="og:image:alt" content="301-번째 국회의원, 《차별금지법》을 발의하다" />
 			<meta property="og:locale" content="ko_KR" />
 			<meta property="og:site_name" content="301-번째 국회의원, 《차별금지법》을 발의하다" />
-			<meta property="og:url" content="" />
-			<meta name="twitter:image" content="http://gihoek.com/image/thumbnail-1200x630.jpg" />
+			<meta property="og:url" content="https://studiohalf-bottle.github.io/301-MP/" />
+			<meta name="twitter:image" content="https://studiohalf-bottle.github.io/301-MP/@asset/image/thumbnail_1200x630.png" />
 			<meta name="twitter:card" content="summary_large_image" />
 
 
@@ -95,8 +98,14 @@
 		</script>
 		-->
 	</head>
-
+	
+	
 	<body class="container">
+		
+		<!-- Facebook SDK for share button -->
+		<div id="fb-root"></div>
+		<script async defer crossorigin="anonymous" src="https://connect.facebook.net/ko_KR/sdk.js#xfbml=1&version=v7.0&appId=350202635492695" nonce="HNz8ny7i"></script>
+
 		<div id="header-container" class="row mt-4 mt-md-5">
 			<div id="mainTitle" class="col-10 col-md-5 offset-md-0 my-2 my-md-0">
 				<object class="d-none d-md-block" type="image/svg+xml" data="@asset/image/mainTitle-desktop.svg"></object>
@@ -146,7 +155,69 @@
 			<span class="bold-text">8월 1일 23:59:59</span>까지 <span class="number-left"></span>의 추가 서명이 필요합니다. <br>
 			서명과 공유를 통해 《차별금지법》의 통과에 힘을 실어주세요.
 		</p>
+		
 		<div id="shareButton-container">
+			<!-- Facebook share button -->
+			<div class="fb-share-button" data-href="https://studiohalf-bottle.github.io/301-MP/" data-layout="button" data-size="large"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fstudiohalf-bottle.github.io%2F301-MP%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">공유하기</a></div>
+			
+			<!-- Twitter tweet button -->
+			<a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-size="large" data-text="《차별금지법》을 발의하는 301-번째 국회의원이 되어주세요. 10만 명의 국회 청원 서명에 동참해주세요." data-url="https://studiohalf-bottle.github.io/301-MP/" data-show-count="false">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+			
+			<!-- Telegram send button -->
+			<script async src="https://telegram.org/js/telegram-widget.js?9" data-telegram-share-url="https://studiohalf-bottle.github.io/301-MP/" data-comment="《차별금지법》을 발의하는 301-번째 국회의원이 되어주세요. 10만 명의 국회 청원 서명에 동참해주세요." data-size="large"></script>
+			
+			<!-- KakaoTalk send button -->
+			<a id="create-kakao-link-btn" href="javascript:;">
+				<img src="https://developers.kakao.com/assets/img/about/logos/kakaolink/kakaolink_btn_small.png" />
+			</a>
+			<script type="text/javascript">
+				// 웹 플랫폼 도메인 등 초기화한 앱의 설정이 그대로 적용됩니다.
+				// 초기화한 앱에 현재 도메인이 등록되지 않은 경우 에러가 발생합니다.
+				Kakao.init('5912ab65baf93a44cb78d00734ed02e0')
+				Kakao.Link.createDefaultButton({
+					container: '#create-kakao-link-btn',
+					objectType: 'feed',
+					content: {
+						title: '301-번째 국회의원, 《차별금지법》을 발의하다',
+						description: '10만 명의 국회 청원 서명에 동참해서,《차별금지법》을 발의하는 301-번째 국회의원이 되어주세요.',
+						imageUrl: 'https://studiohalf-bottle.github.io/301-MP/@asset/image/thumbnail_1200x630.png',
+						link: {
+							mobileWebUrl: 'https://studiohalf-bottle.github.io/301-MP/',
+							webUrl: 'https://studiohalf-bottle.github.io/301-MP/',
+						},
+					},
+					buttons: [{
+							title: '살펴보기',
+							link: {
+								mobileWebUrl: 'https://studiohalf-bottle.github.io/301-MP/',
+								webUrl: 'https://studiohalf-bottle.github.io/301-MP/',
+							},
+						},
+						{
+							title: '서명하러 바로가기',
+							link: {
+								mobileWebUrl: 'https://petitions.assembly.go.kr/status/onGoing/A72F65A24E773038E054A0369F40E84E',
+								webUrl: 'https://petitions.assembly.go.kr/status/onGoing/A72F65A24E773038E054A0369F40E84E',
+							},
+						},
+					],
+				})
+			</script>
+			
+			<!-- Naver Band send button -->
+			<span>
+				<script type="text/javascript" src="//developers.band.us/js/share/band-button.js?v=21072020"></script>
+				<script type="text/javascript">
+					new ShareBand.makeButton({
+						"lang": "ko-KR",
+						"type": "d",
+						"text": "《차별금지법》을 발의하는 301-번째 국회의원이 되어주세요. 10만 명의 국회 청원 서명에 동참해주세요.",
+						"withUrl": true
+					});
+				</script>
+			</span>
+			
+			
 		</div>
 		
 		
