@@ -187,6 +187,20 @@ div#d-day-section {
     display: inline-block;
     vertical-align: middle; }
 
+div#goToSignButton-container {
+  position: relative;
+  display: inline-block;
+  text-align: center;
+  width: 75%;
+  max-width: 16rem;
+  margin-bottom: 2rem; }
+  @media (min-width: 768px) {
+    div#goToSignButton-container {
+      width: 50%; } }
+  div#goToSignButton-container object[type="image/svg+xml"] {
+    width: 100%;
+    pointer-events: none; }
+
 div#shareButton-container {
   display: flex;
   align-items: center;
@@ -205,16 +219,3 @@ div#shareButton-container {
   @media (min-width: 992px) {
     div#shareButton-container {
       width: 50%; } }
-
-div#goToSignButton-container {
-  display: inline-block;
-  text-align: center;
-  width: 75%;
-  max-width: 16rem;
-  margin-bottom: 2rem; }
-  @media (min-width: 768px) {
-    div#goToSignButton-container {
-      width: 50%; } }
-  div#goToSignButton-container object[type="image/svg+xml"] {
-    width: 100%;
-    pointer-events: none; }
