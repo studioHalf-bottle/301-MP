@@ -1,0 +1,208 @@
+/* 
+	device width distinction - 
+	1024px ~ : Desktop layout
+	768px ~ 1023px : tablet layout
+	~ 767px, (min-aspect-ratio: 1/1) : mobile phone layout, widescreen aspect
+	360px ~ 767px, (max-aspect-ratio: 1/1) : mobile phone layout, portrait aspect
+	~ (320px) ~ 359px : legendary mobile phone layout
+
+	bootstrap 4 width distinction -
+	1200px ~ : ExtraLarge
+	992px ~ 1199px : LarGe
+	768px ~ 991px : MeDium
+	576px ~ 767px : SMall
+	~ 575px : ExtraSmall
+*/
+/* basic constants */
+/* customising Bootrstrap theme */
+/* initialize settings */
+html {
+  /* 1rem = this size. */
+  font-size: 18px;
+  font-family: sans-serif;
+  color: #ffffff;
+  background: #000000;
+  word-break: keep-all;
+  position: relative; }
+  @media (min-width: 576px) {
+    html {
+      font-size: 18px; } }
+  @media (min-width: 768px) {
+    html {
+      font-size: 20px; } }
+  @media (min-width: 992px) {
+    html {
+      font-size: 22px; } }
+  @media (min-width: 1200px) {
+    html {
+      font-size: 22px; } }
+
+body {
+  font-family: "open-arrow", "Spoqa Han Sans", "Lato", "Noto Sans KR", sans-serif;
+  line-height: 1.4;
+  font-style: normal;
+  font-weight: 300;
+  margin: 0 0 0 0;
+  padding: 0 0 0 0;
+  width: 100%;
+  text-align: center;
+  color: #ffffff;
+  background-color: #000000; }
+  body .WindowsOS {
+    font-family: "open-arrow", "Lato", "Noto Sans KR", sans-serif; }
+
+p {
+  margin: 0 0 0 0;
+  padding: 0 0 0 0; }
+
+div, input {
+  box-sizing: border-box;
+  background-color: transparent; }
+
+/* typographic elements */
+a {
+  color: #ffffff !important;
+  text-decoration: underline;
+  text-decoration-thickness: 0.1em; }
+  a:hover {
+    cursor: pointer; }
+
+span.number-hasDone, span.number-left {
+  font-weight: 700; }
+
+span.upper-annotation {
+  font-size: 0.66em;
+  vertical-align: 0.25em; }
+
+p.main-paragraph {
+  font-size: 1rem;
+  padding: 1em 0; }
+
+p.footnote {
+  font-size: 0.667rem;
+  text-align: left;
+  padding: 0 0 2rem; }
+
+div#shareButton-container + p.footnote {
+  padding-top: 6rem; }
+
+/* graph elements */
+div#graph-container {
+  margin-top: -0.5rem;
+  height: calc( (100vw - 30px) * 0.66666667 + 2px); }
+  @media (min-width: 576px) {
+    div#graph-container {
+      height: calc( ( 540px - 30px ) * 0.66666667 + 2px); } }
+  @media (min-width: 768px) {
+    div#graph-container {
+      margin-top: 0;
+      height: calc( ( (720px - 60px) * 0.58333333 ) * 0.83333333 + 2px); } }
+  @media (min-width: 992px) {
+    div#graph-container {
+      height: calc( ( (960px - 60px) * 0.58333333 ) * 0.83333333 + 2px); } }
+  @media (min-width: 1200px) {
+    div#graph-container {
+      height: calc( ( (1140px - 60px) * 0.58333333 ) * 0.83333333 + 2px); } }
+
+div#leftToGo-section, div#hasDone-section {
+  position: relative;
+  overflow: hidden;
+  transition: height 1.2s cubic-bezier(0.33, 1, 0.68, 1); }
+  div#leftToGo-section object[type="image/svg+xml"], div#hasDone-section object[type="image/svg+xml"] {
+    position: absolute;
+    left: calc( (100vw - 30px) * 0.16666667);
+    width: calc( (100vw - 30px) * 0.66666667);
+    pointer-events: none; }
+    @media (min-width: 576px) {
+      div#leftToGo-section object[type="image/svg+xml"], div#hasDone-section object[type="image/svg+xml"] {
+        left: calc( (540px - 30px) * 0.16666667);
+        width: calc( ( 540px - 30px ) * 0.66666667); } }
+    @media (min-width: 768px) {
+      div#leftToGo-section object[type="image/svg+xml"], div#hasDone-section object[type="image/svg+xml"] {
+        left: 0;
+        width: 83.33333%; } }
+    div#leftToGo-section object[type="image/svg+xml"]#nationalAssembly-leftToGo, div#hasDone-section object[type="image/svg+xml"]#nationalAssembly-leftToGo {
+      top: 0;
+      opacity: 0.3; }
+    div#leftToGo-section object[type="image/svg+xml"]#nationalAssembly-hasDone, div#hasDone-section object[type="image/svg+xml"]#nationalAssembly-hasDone {
+      bottom: 0; }
+  div#leftToGo-section div.scale-meter, div#hasDone-section div.scale-meter {
+    position: relative;
+    border: 0px dashed #ffffff;
+    padding: 0.25em;
+    width: 100%;
+    height: 100%;
+    text-align: right; }
+  div#leftToGo-section#leftToGo-section, div#hasDone-section#leftToGo-section {
+    height: 100%; }
+    div#leftToGo-section#leftToGo-section div.scale-meter, div#hasDone-section#leftToGo-section div.scale-meter {
+      border-bottom-width: 2px; }
+  div#leftToGo-section#hasDone-section, div#hasDone-section#hasDone-section {
+    height: 0px; }
+    div#leftToGo-section#hasDone-section div.scale-meter, div#hasDone-section#hasDone-section div.scale-meter {
+      border-top-width: 2px; }
+
+/* other SVG elements */
+div#mainTitle {
+  margin-left: calc( 8.33333% / 4 * 3); }
+  @media (min-width: 768px) {
+    div#mainTitle {
+      margin-left: 0; } }
+  div#mainTitle object[type="image/svg+xml"] {
+    width: 100%;
+    pointer-events: none; }
+
+div#d-day-section {
+  position: relative;
+  display: inline-block;
+  margin-top: -1rem;
+  margin-bottom: 4rem;
+  width: 83.33333%;
+  text-align: right;
+  line-height: 40px;
+  transform-origin: top right;
+  transform: scale(0.7) skew(8deg, -14deg); }
+  @media (min-width: 576px) {
+    div#d-day-section {
+      margin-top: -1rem;
+      margin-bottom: 4rem;
+      transform: scale(0.7) skew(8deg, -14deg); } }
+  @media (min-width: 768px) {
+    div#d-day-section {
+      margin-top: -1rem;
+      margin-bottom: 4rem;
+      width: 100%;
+      transform: scale(0.75) skew(8deg, -14deg); } }
+  @media (min-width: 992px) {
+    div#d-day-section {
+      margin-top: -2rem;
+      margin-bottom: 4rem;
+      transform: scale(0.8) skew(8deg, -14deg); } }
+  @media (min-width: 1200px) {
+    div#d-day-section {
+      margin-top: -2rem;
+      margin-bottom: 4rem;
+      transform: scale(1) skew(8deg, -14deg); } }
+  div#d-day-section object[type="image/svg+xml"] {
+    display: inline-block;
+    vertical-align: middle; }
+
+div#goToSignButton-container {
+  display: inline-block;
+  text-align: center;
+  width: 75%;
+  max-width: 16rem;
+  margin-bottom: 2rem; }
+  @media (min-width: 768px) {
+    div#goToSignButton-container {
+      width: 50%; } }
+  div#goToSignButton-container object[type="image/svg+xml"] {
+    width: 100%;
+    pointer-events: none; }
+
+.skew-container {
+  transform-origin: left bottom;
+  transform: skew(15deg) translate(0, 100%); }
+  .skew-container img {
+    width: 100%;
+    height: auto; }

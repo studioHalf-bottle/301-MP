@@ -1,0 +1,203 @@
+@charset "UTF-8";
+
+/* 
+	device width distinction - 
+	1024px ~ : Desktop layout
+	768px ~ 1023px : tablet layout
+	~ 767px, (min-aspect-ratio: 1/1) : mobile phone layout, widescreen aspect
+	360px ~ 767px, (max-aspect-ratio: 1/1) : mobile phone layout, portrait aspect
+	~ (320px) ~ 359px : legendary mobile phone layout
+
+	bootstrap 4 width distinction -
+	1200px ~ : ExtraLarge
+	992px ~ 1199px : LarGe
+	768px ~ 991px : MeDium
+	576px ~ 767px : SMall
+	~ 575px : ExtraSmall
+*/
+
+
+/* basic constants */
+
+$ratio-1-12: 8.33333333%;
+$ratio-2-12: 16.66666667%;
+$ratio-3-12: 25%;
+$ratio-4-12: 33.33333333%;
+$ratio-5-12: 41.66666667%;
+$ratio-6-12: 50%;
+$ratio-7-12: 58.33333333%;
+$ratio-8-12: 66.66666667%;
+$ratio-9-12: 75%;
+$ratio-10-12: 83.33333333%;
+$ratio-11-12: 91.66666667%;
+$ratio-12-12: 100%;
+
+
+/* customising Bootrstrap theme */
+
+//.container-fluid, .container-lg, .container-md, .container-sm, .container-xl { padding: 0; }
+//
+//.row { margin-left: 0; margin-right: 0; }
+//
+//.col, .col-1, .col-10, .col-11, .col-12, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-auto, .col-lg, .col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-auto, .col-md, .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-auto, .col-sm, .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-auto, .col-xl, .col-xl-1, .col-xl-10, .col-xl-11, .col-xl-12, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-auto {
+//	padding-left: 0; padding-right: 0; 
+//}
+
+
+
+/* initialize settings */
+
+$textColour: #ffffff;
+$textColour-hover: #727177;
+$backgroundColour-mono: #000000; 
+
+
+html {
+	/* 1rem = this size. */
+	font-size: 18px; 
+	@media (min-width: 576px) { font-size: 18px; }
+	@media (min-width: 768px) { font-size: 20px; }
+	@media (min-width: 992px) { font-size: 22px; }
+	@media (min-width: 1200px) { font-size: 22px; }
+	
+	font-family: sans-serif;
+	
+	color: $textColour; background: $backgroundColour-mono;
+	word-break: keep-all;
+	
+	position: relative;
+}
+body {
+	font-family: "open-arrow", "Spoqa Han Sans", "Lato", "Noto Sans KR", sans-serif;
+	.WindowsOS { font-family: "open-arrow", "Lato", "Noto Sans KR", sans-serif; }
+	
+	line-height: 1.4;
+	font-style: normal;
+	font-weight: 300;
+	
+	margin: 0 0 0 0;
+	padding: 0 0 0 0;
+	width: 100%;
+	
+	text-align: center;
+	color: $textColour; background-color: $backgroundColour-mono;
+}
+p {
+	margin: 0 0 0 0;
+	padding: 0 0 0 0;
+}
+div, input {
+	box-sizing: border-box;
+	background-color: transparent;
+}
+
+
+/* typographic elements */
+
+a { color: $textColour !important; text-decoration: /*dashed*/ underline; text-decoration-thickness: 0.1em; 
+	&:hover { cursor: pointer; }
+}
+span.number-hasDone, span.number-left { font-weight: 700; }
+span.upper-annotation { font-size: 0.66em; vertical-align: 0.25em; }
+
+p.main-paragraph { font-size: 1rem; padding: 1em 0; }
+
+div#shareButton-container {}
+
+p.footnote { font-size: 0.667rem; text-align: left; padding: 0 0 2rem; }
+div#shareButton-container + p.footnote { padding-top: 6rem; }
+
+
+
+
+
+/* graph elements */
+div#graph-container { 
+	margin-top: -0.5rem; height: calc( (100vw - 30px) * 0.66666667 + 2px ); 
+	@media (min-width: 576px) { height: calc( ( 540px - 30px ) * 0.66666667 + 2px ); }
+	@media (min-width: 768px) { margin-top: 0; height: calc( ( (720px - 60px) * 0.58333333 ) * 0.83333333 + 2px ); }
+	@media (min-width: 992px) { height: calc( ( (960px - 60px) * 0.58333333 ) * 0.83333333 + 2px ); }
+	@media (min-width: 1200px) { height: calc( ( (1140px - 60px) * 0.58333333 ) * 0.83333333 + 2px ); }
+}
+
+div#leftToGo-section, div#hasDone-section { 
+	position: relative; overflow: hidden; 
+	
+	transition: height 1.2s cubic-bezier(0.33, 1, 0.68, 1);
+	
+	object[type="image/svg+xml"] { 
+		position: absolute; 
+		
+		left: calc( (100vw - 30px) * 0.16666667); width: calc( (100vw - 30px) * 0.66666667 ); 
+		@media (min-width: 576px) { left: calc( (540px - 30px) * 0.16666667); width: calc( ( 540px - 30px ) * 0.66666667 ); }
+		@media (min-width: 768px) { left: 0; width: $ratio-10-12; }
+		
+		pointer-events: none; 
+		
+		&#nationalAssembly-leftToGo { top: 0; opacity: 0.3; }
+		&#nationalAssembly-hasDone { bottom: 0; }
+	}
+	
+	div.scale-meter { 
+		position: relative;
+		border: 0px dashed $textColour; padding: 0.25em;
+		width: 100%; height: 100%;
+		text-align: right; 
+	}
+	
+	&#leftToGo-section {
+		height: 100%;
+		div.scale-meter { border-bottom-width: 2px; }
+	}
+	&#hasDone-section {
+		height: 0px; 
+		div.scale-meter { border-top-width: 2px; }
+	}
+}
+
+
+
+/* other SVG elements */
+
+div#mainTitle { 
+	margin-left: calc( #{$ratio-1-12} / 4 * 3 );
+	@media (min-width: 768px) { margin-left: 0; }
+	object[type="image/svg+xml"] { width: 100%; pointer-events: none; }
+}
+
+div#d-day-section {
+	position: relative; display: inline-block; 
+	margin-top: -1rem; margin-bottom: 4rem; width: $ratio-10-12;
+	text-align: right; line-height: 40px;
+	transform-origin: top right; 
+	
+	transform: scale(0.7) skew(8deg, -14deg);
+	@media (min-width: 576px) { margin-top: -1rem; margin-bottom: 4rem; transform: scale(0.7) skew(8deg, -14deg); }
+	@media (min-width: 768px) { margin-top: -1rem; margin-bottom: 4rem; width: 100%; transform: scale(0.6) skew(8deg, -14deg); }
+	@media (min-width: 992px) { margin-top: -2rem; margin-bottom: 4rem; transform: scale(0.8) skew(8deg, -14deg); }
+	@media (min-width: 1200px) { margin-top: -2rem; margin-bottom: 4rem; transform: scale(1.0) skew(8deg, -14deg); }
+	
+	object[type="image/svg+xml"] { 
+		display: inline-block; vertical-align: middle;
+		
+	}
+}
+
+div#goToSignButton-container { 
+	display: inline-block; text-align: center; 
+	width: $ratio-9-12; max-width: 16rem;
+	@media (min-width: 768px) { width: $ratio-6-12; } 
+	margin-bottom: 2rem;
+	
+	object[type="image/svg+xml"] { width: 100%; pointer-events: none; }
+}
+
+
+
+
+.skew-container {
+	transform-origin: left bottom;
+	transform: skew(15deg) translate(0, 100%);
+	
+	img { width: 100%; height: auto; }
+}
