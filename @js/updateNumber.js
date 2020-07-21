@@ -2,7 +2,7 @@ var number_hasDone = 0,
 	number_left = 100000, 
 	days_left = 0;
 const number_toGo = 100000, 
-	  number_hasDone_nonAutomatic = 19077, 
+	  number_hasDone_nonAutomatic = 19245, 
 	  days_left_constant = 32,
 	  currentTime = new Date('21 Jul 2020 10:00:00');
 
@@ -43,6 +43,7 @@ function redraw_graph() {
 //				}
 //	});
 	
+
 	
 //	number_hasDone = data.agreCo;
 	number_hasDone = number_hasDone_nonAutomatic;
@@ -80,5 +81,3 @@ function redraw_graph() {
 // CORS로 블록당함. 국회 네이노오오오오옹오오오ㅗ오오오오ㅗㅇㅁ
 
 $(document).ready( function() { setTimeout( redraw_graph, 500 ) });
-
-$(document).on("load", redraw_graph);
