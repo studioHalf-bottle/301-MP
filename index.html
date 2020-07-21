@@ -132,7 +132,7 @@
 			<object id="howMuchToGo" type="image/svg+xml" data="@asset/image/howMuchToGo.svg"></object>
 		</div>
 		
-		<div id="goToSignButton-container">
+		<div id="goToSignButton-container" onclick="gtag('event', '청원버튼 클릭' {'event_category' : '청원버튼', 'event_label' : 'assembly'});">
 			<object class="d-none d-md-block" type="image/svg+xml" data="@asset/image/goToSignButton-desktop.svg"></object>
 			<object class="d-block d-md-none" type="image/svg+xml" data="@asset/image/goToSignButton-mobile.svg"></object>
 			<a class="stretched-link" href="https://petitions.assembly.go.kr/status/onGoing/A72F65A24E773038E054A0369F40E84E" target="_self"></a>
@@ -157,16 +157,23 @@
 		
 		<div id="shareButton-container">
 			<!-- Facebook share button -->
-			<div class="fb-share-button" data-href="https://studiohalf-bottle.github.io/301-MP/" data-layout="button" data-size="large"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fstudiohalf-bottle.github.io%2F301-MP%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">공유하기</a></div>
+			<div class="fb-share-button" data-href="https://studiohalf-bottle.github.io/301-MP/" data-layout="button" data-size="large" 
+				 onclick="gtag('event', '공유버튼 클릭' {'event_category' : '공유버튼', 'event_label' : 'facebook'});">
+				<a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fstudiohalf-bottle.github.io%2F301-MP%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">공유하기</a>
+			</div>
 			
 			<!-- Twitter tweet button -->
-			<a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-size="large" data-text="《차별금지법》을 발의하는 301-번째 국회의원이 되어주세요. 10만 명의 국회 청원 서명에 동참해주세요." data-url="https://studiohalf-bottle.github.io/301-MP/" data-show-count="false">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+			<a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-size="large" data-text="《차별금지법》을 발의하는 301-번째 국회의원이 되어주세요. 10만 명의 국회 청원 서명에 동참해주세요." data-url="https://studiohalf-bottle.github.io/301-MP/" data-show-count="false" 
+			   onclick="gtag('event', '공유버튼 클릭' {'event_category' : '공유버튼', 'event_label' : 'twitter'});">Tweet</a>
+			<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 			
 			<!-- Telegram send button -->
-			<script async src="https://telegram.org/js/telegram-widget.js?9" data-telegram-share-url="https://studiohalf-bottle.github.io/301-MP/" data-comment="《차별금지법》을 발의하는 301-번째 국회의원이 되어주세요. 10만 명의 국회 청원 서명에 동참해주세요." data-size="large"></script>
+			<script async src="https://telegram.org/js/telegram-widget.js?9" data-telegram-share-url="https://studiohalf-bottle.github.io/301-MP/" data-comment="《차별금지법》을 발의하는 301-번째 국회의원이 되어주세요. 10만 명의 국회 청원 서명에 동참해주세요." data-size="large" 
+					onclick="gtag('event', '공유버튼 클릭' {'event_category' : '공유버튼', 'event_label' : 'telegram'});"></script>
 			
 			<!-- KakaoTalk send button -->
-			<a id="create-kakao-link-btn" href="javascript:;">
+			<a id="create-kakao-link-btn" href="javascript:;" 
+			   onclick="gtag('event', '공유버튼 클릭' {'event_category' : '공유버튼', 'event_label' : 'kakaotalk'});">
 				<img src="https://developers.kakao.com/assets/img/about/logos/kakaolink/kakaolink_btn_small.png" />
 			</a>
 			<script type="text/javascript">
@@ -204,7 +211,7 @@
 			</script>
 			
 			<!-- Naver Band send button -->
-			<span>
+			<span onclick="gtag('event', '공유버튼 클릭' {'event_category' : '공유버튼', 'event_label' : 'naver band'});">
 				<script type="text/javascript" src="//developers.band.us/js/share/band-button.js?v=21072020"></script>
 				<script type="text/javascript">
 					new ShareBand.makeButton({
