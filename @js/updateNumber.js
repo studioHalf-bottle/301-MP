@@ -2,9 +2,9 @@ var number_hasDone = 0,
 	number_left = 100000, 
 	days_left = 0;
 const number_toGo = 100000, 
-	  number_hasDone_nonAutomatic = 19823, 
+	  number_hasDone_nonAutomatic = 20125, 
 	  days_left_constant = 32,
-	  currentTime = new Date('21 Jul 2020 19:00:00');
+	  currentTime = new Date('22 Jul 2020 03:30:00');
 
 function addZero(i) { 
 	if (i < 10) return "0"+i.toString(); 
@@ -68,7 +68,7 @@ function redraw_graph() {
 	var percent_hasDone = number_hasDone / number_toGo * 100;
 	var percent_left = number_left / number_toGo * 100;
 	
-//	setTimeout( function() {
+	setTimeout( function() {
 		$("object#d-day-integer").attr({ width: "", height: ""});
 		
 		$("div#leftToGo-section").css("height", percent_left+"%"); 
@@ -79,7 +79,7 @@ function redraw_graph() {
 		$("span.number-left").each( function(i, ele) {
 			new CountUp(ele, number_left, countUpJS_options_left).start();
 		});
-//	}, 200 );
+	}, 200 );
 	
 	
 	

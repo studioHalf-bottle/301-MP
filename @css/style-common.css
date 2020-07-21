@@ -67,7 +67,7 @@ a {
   a:hover {
     cursor: pointer; }
 
-span.number-hasDone, span.number-left {
+span.number-hasDone, span.number-left, span.bold {
   font-weight: 700; }
 
 span.upper-annotation {
@@ -89,10 +89,10 @@ div#shareButton-container + p.footnote {
 /* graph elements */
 div#graph-container {
   margin-top: -0.5rem;
-  height: calc( (100vw - 30px) * 0.66666667 + 2px); }
+  height: calc( (100vw - 30px) * 0.66666667); }
   @media (min-width: 576px) {
     div#graph-container {
-      height: calc( ( 540px - 30px ) * 0.66666667 + 2px); } }
+      height: calc( ( 540px - 30px ) * 0.66666667); } }
   @media (min-width: 768px) {
     div#graph-container {
       margin-top: 0;

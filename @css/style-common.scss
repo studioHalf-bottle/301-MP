@@ -97,7 +97,7 @@ div, input {
 a { color: $textColour !important; text-decoration: /*dashed*/ underline; text-decoration-thickness: 0.1em; 
 	&:hover { cursor: pointer; }
 }
-span.number-hasDone, span.number-left { font-weight: 700; }
+span.number-hasDone, span.number-left, span.bold { font-weight: 700; }
 span.upper-annotation { font-size: 0.66em; vertical-align: 0.25em; }
 
 p.main-paragraph { font-size: 1rem; padding: 1em 0; }
@@ -113,8 +113,8 @@ div#shareButton-container + p.footnote { padding-top: 6rem; }
 
 /* graph elements */
 div#graph-container { 
-	margin-top: -0.5rem; height: calc( (100vw - 30px) * 0.66666667 + 2px ); 
-	@media (min-width: 576px) { height: calc( ( 540px - 30px ) * 0.66666667 + 2px ); }
+	margin-top: -0.5rem; height: calc( (100vw - 30px) * 0.66666667 ); 
+	@media (min-width: 576px) { height: calc( ( 540px - 30px ) * 0.66666667 ); }
 	@media (min-width: 768px) { margin-top: 0; height: calc( ( (720px - 60px) * 0.58333333 ) * 0.83333333 + 2px ); }
 	@media (min-width: 992px) { height: calc( ( (960px - 60px) * 0.58333333 ) * 0.83333333 + 2px ); }
 	@media (min-width: 1200px) { height: calc( ( (1140px - 60px) * 0.58333333 ) * 0.83333333 + 2px ); }
