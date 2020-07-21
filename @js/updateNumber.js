@@ -2,9 +2,9 @@ var number_hasDone = 0,
 	number_left = 100000, 
 	days_left = 0;
 const number_toGo = 100000, 
-	  number_hasDone_nonAutomatic = 19245, 
+	  number_hasDone_nonAutomatic = 19333, 
 	  days_left_constant = 32,
-	  currentTime = new Date('21 Jul 2020 12:00:00');
+	  currentTime = new Date('21 Jul 2020 13:15:00');
 
 function addZero(i) { 
 	if (i < 10) return "0"+i.toString(); 
@@ -14,16 +14,10 @@ function addZero(i) {
 
 /* countUp.js */
 
-import { CountUp } from '../library/countUp.min.js';
+import { CountUp } from '../library/countUp.js';
 
-const easingFn = function (t, b, c, d) {
-	var ts = (t /= d) * t;
-	var tc = ts * t;
-//	return b + c * (tc * ts + -5 * ts * ts + 10 * tc + -10 * ts + 5 * t);
-	return 1 - pow(1 - t, 3);
-}
-var countUpJS_options_hasDone = { startVal: 0, duration: 1.75, easingFn, suffix: '명' }, 
-	countUpJS_options_left = { startVal: number_toGo, duration: 1.75, easingFn, suffix: '명' };
+var countUpJS_options_hasDone = { startVal: 0, duration: 1.75, suffix: '명' }, 
+	countUpJS_options_left = { startVal: number_toGo, duration: 1.75, suffix: '명' };
 
 
 function redraw_graph() {
@@ -42,8 +36,21 @@ function redraw_graph() {
 //					$("span.number-left").html( d3.format(",")(number_left) + "명" );
 //				}
 //	});
-	
-
+//	
+//	$.ajax({
+//		type: 'GET',
+//		crossDomain: true,
+//		url: "https://petitions.assembly.go.kr/status/onGoing/A72F65A24E773038E054A0369F40E84E",
+//		dataType: 'html',
+//		success: function(data) {
+//					console.log(data);
+//					number_hasDone = data.agreCo;
+//					number_left = number_toGo - number_hasDone;
+//
+//					$("span.number-hasDone").html( d3.format(",")(number_hasDone) + "명" );
+//					$("span.number-left").html( d3.format(",")(number_left) + "명" );
+//				}
+//	});
 	
 //	number_hasDone = data.agreCo;
 	number_hasDone = number_hasDone_nonAutomatic;
@@ -61,7 +68,7 @@ function redraw_graph() {
 	var percent_hasDone = number_hasDone / number_toGo * 100;
 	var percent_left = number_left / number_toGo * 100;
 	
-	setTimeout( function() {
+//	setTimeout( function() {
 		$("object#d-day-integer").attr({ width: "", height: ""});
 		
 		$("div#leftToGo-section").css("height", percent_left+"%"); 
@@ -72,7 +79,7 @@ function redraw_graph() {
 		$("span.number-left").each( function(i, ele) {
 			new CountUp(ele, number_left, countUpJS_options_left).start();
 		});
-	}, 200 );
+//	}, 200 );
 	
 	
 	
