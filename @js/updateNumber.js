@@ -4,7 +4,7 @@ var number_hasDone = 0,
 const number_toGo = 100000, 
 	  number_hasDone_nonAutomatic = 19245, 
 	  days_left_constant = 32,
-	  currentTime = new Date('21 Jul 2020 10:00:00');
+	  currentTime = new Date('21 Jul 2020 12:00:00');
 
 function addZero(i) { 
 	if (i < 10) return "0"+i.toString(); 
@@ -81,3 +81,7 @@ function redraw_graph() {
 // CORS로 블록당함. 국회 네이노오오오오옹오오오ㅗ오오오오ㅗㅇㅁ
 
 $(document).ready( function() { setTimeout( redraw_graph, 500 ) });
+
+$(document).on("load", redraw_graph);
+
+$(document).resize( redraw_graph );
