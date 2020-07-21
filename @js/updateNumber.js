@@ -14,7 +14,7 @@ function addZero(i) {
 
 /* countUp.js */
 
-import { CountUp } from '../library/countUp.js';
+import { CountUp } from '../library/countUp.min.js';
 
 var countUpJS_options_hasDone = { startVal: 0, duration: 1.75, suffix: '명' }, 
 	countUpJS_options_left = { startVal: number_toGo, duration: 1.75, suffix: '명' };
