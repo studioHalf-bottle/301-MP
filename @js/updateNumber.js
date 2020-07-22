@@ -2,7 +2,7 @@ var number_hasDone = 0,
 	number_left = 100000, 
 	days_left = 0;
 const number_toGo = 100000, 
-	  number_hasDone_nonAutomatic = 20125, 
+	  number_hasDone_nonAutomatic = 20219, 
 	  days_left_constant = 32,
 	  currentTime = new Date('22 Jul 2020 03:30:00');
 
@@ -22,20 +22,20 @@ var countUpJS_options_hasDone = { startVal: 0, duration: 1.75, suffix: '명' },
 
 function redraw_graph() {
 	
-//	$.ajax({
-//		type: 'GET',
+	$.ajax({
+		type: 'GET',
 //		crossDomain: true,
-//		url: "https://petitions.assembly.go.kr/api/petits/A72F65A24E773038E054A0369F40E84E",
+		url: "https://petitions.assembly.go.kr/api/petits/A72F65A24E773038E054A0369F40E84E",
 //		dataType: 'jsonp',
-//		success: function(data) {
-//					console.log(data);
-//					number_hasDone = data.agreCo;
-//					number_left = number_toGo - number_hasDone;
-//
-//					$("span.number-hasDone").html( d3.format(",")(number_hasDone) + "명" );
-//					$("span.number-left").html( d3.format(",")(number_left) + "명" );
-//				}
-//	});
+		success: function(data) {
+					console.log(data);
+					number_hasDone = data.agreCo;
+					number_left = number_toGo - number_hasDone;
+
+					$("span.number-hasDone").html( d3.format(",")(number_hasDone) + "명" );
+					$("span.number-left").html( d3.format(",")(number_left) + "명" );
+				}
+	});
 //	
 //	$.ajax({
 //		type: 'GET',
