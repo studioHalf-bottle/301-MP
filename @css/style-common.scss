@@ -177,15 +177,21 @@ div#mainTitle {
 
 div#d-day-section {
 	position: relative; display: inline-block; 
-	margin-top: -1rem; margin-bottom: 4rem; width: $ratio-10-12;
+	width: $ratio-10-12;
 	text-align: right; line-height: 40px;
 	transform-origin: top right; 
 	
-	transform: scale(0.7) skew(8deg, -14deg);
-	@media (min-width: 576px) { margin-top: -1rem; margin-bottom: 4rem; transform: scale(0.7) skew(8deg, -14deg); }
-	@media (min-width: 768px) { margin-top: -1rem; margin-bottom: 4rem; width: 100%; transform: scale(0.6) skew(8deg, -14deg); }
-	@media (min-width: 992px) { margin-top: -2rem; margin-bottom: 4rem; transform: scale(0.8) skew(8deg, -14deg); }
-	@media (min-width: 1200px) { margin-top: -2rem; margin-bottom: 4rem; transform: scale(1.0) skew(8deg, -14deg); }
+//	margin-top: 1rem; margin-bottom: -1rem; transform: scale(0.7) skew(8deg, -14deg);
+//	@media (min-width: 576px) { margin-top: -1rem; margin-bottom: 4rem; transform: scale(0.7) skew(8deg, -14deg); }
+//	@media (min-width: 768px) { margin-top: -1rem; margin-bottom: 4rem; width: 100%; transform: scale(0.6) skew(8deg, -14deg); }
+//	@media (min-width: 992px) { margin-top: -2rem; margin-bottom: 4rem; transform: scale(0.8) skew(8deg, -14deg); }
+//	@media (min-width: 1200px) { margin-top: -2rem; margin-bottom: 4rem; transform: scale(1.0) skew(8deg, -14deg); }
+	
+	margin-top: 0rem; margin-bottom: 3rem; transform: scale(0.7) skew(8deg, -14deg);
+	@media (min-width: 576px) { margin-top: 0rem; margin-bottom: 3rem; transform: scale(0.7) skew(8deg, -14deg); }
+	@media (min-width: 768px) { margin-top: 0.5rem; margin-bottom: 0.5rem; width: 100%; transform: scale(0.6) skew(8deg, -14deg); }
+	@media (min-width: 992px) { margin-top: 2rem; margin-bottom: 0rem; transform: translateX(-1.5rem) scale(0.8) skew(8deg, -14deg); }
+	@media (min-width: 1200px) { margin-top: 1rem; margin-bottom: 1rem; transform: scale(1.0) skew(8deg, -14deg); }
 	
 	object[type="image/svg+xml"] { 
 		display: inline-block; vertical-align: middle;
@@ -200,6 +206,12 @@ div#goToSignButton-container {
 	width: $ratio-9-12; max-width: 16rem;
 	@media (min-width: 768px) { width: $ratio-6-12; } 
 	margin-bottom: 2rem;
+	
+	margin-top: 0rem; 
+	@media (min-width: 576px) { margin-top: 0rem; }
+	@media (min-width: 768px) { margin-top: -2rem; }
+	@media (min-width: 992px) { margin-top: -2.5rem; }
+	@media (min-width: 1200px) { margin-top: -2.5rem; }
 	
 	object[type="image/svg+xml"] { width: 100%; pointer-events: none; }
 }
