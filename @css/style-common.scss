@@ -140,9 +140,17 @@ div#leftToGo-section, div#hasDone-section {
 	
 	div.scale-meter { 
 		position: relative;
-		border: 0px dashed $textColour; padding: 0.25em;
+		border: 0px dashed $textColour; padding: 0.5em;
 		width: 100%; height: 100%;
 		text-align: right; 
+	}
+	&#leftToGo-section div.scale-meter {
+		position: absolute; bottom: 0;
+		height: auto;
+	}
+	&#hasDone-section div.scale-meter {
+		position: absolute; top: 0;
+		height: auto;
 	}
 	
 	&#leftToGo-section {
