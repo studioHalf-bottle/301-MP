@@ -107,7 +107,7 @@ div#graph-container {
 div#leftToGo-section, div#hasDone-section {
   position: relative;
   overflow: hidden;
-  transition: height 1.2s cubic-bezier(0.33, 1, 0.68, 1); }
+  transition: height 1.5s cubic-bezier(0.33, 1, 0.68, 1); }
   div#leftToGo-section object[type="image/svg+xml"], div#hasDone-section object[type="image/svg+xml"] {
     position: absolute;
     left: calc( (100vw - 30px) * 0.16666667);
