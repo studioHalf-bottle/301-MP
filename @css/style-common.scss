@@ -144,22 +144,24 @@ div#leftToGo-section, div#hasDone-section {
 		width: 100%; height: 100%;
 		text-align: right; 
 	}
-	&#leftToGo-section div.scale-meter {
-		position: absolute; bottom: 0;
-		height: auto;
-	}
-	&#hasDone-section div.scale-meter {
-		position: absolute; top: 0;
-		height: auto;
-	}
 	
 	&#leftToGo-section {
 		height: 100%;
-		div.scale-meter { border-bottom-width: 2px; }
+		
+		div.scale-meter { 
+			position: absolute; bottom: 0;
+			height: auto;
+			border-bottom-width: 2px; 
+		}
 	}
 	&#hasDone-section {
 		height: 0px; 
-		div.scale-meter { border-top-width: 2px; }
+		
+		div.scale-meter { 
+			position: absolute; top: 0;
+			height: auto;
+			border-top-width: 2px; 
+		}
 	}
 }
 

@@ -133,21 +133,19 @@ div#leftToGo-section, div#hasDone-section {
     width: 100%;
     height: 100%;
     text-align: right; }
-  div#leftToGo-section#leftToGo-section div.scale-meter, div#hasDone-section#leftToGo-section div.scale-meter {
-    position: absolute;
-    bottom: 0;
-    height: auto; }
-  div#leftToGo-section#hasDone-section div.scale-meter, div#hasDone-section#hasDone-section div.scale-meter {
-    position: absolute;
-    top: 0;
-    height: auto; }
   div#leftToGo-section#leftToGo-section, div#hasDone-section#leftToGo-section {
     height: 100%; }
     div#leftToGo-section#leftToGo-section div.scale-meter, div#hasDone-section#leftToGo-section div.scale-meter {
+      position: absolute;
+      bottom: 0;
+      height: auto;
       border-bottom-width: 2px; }
   div#leftToGo-section#hasDone-section, div#hasDone-section#hasDone-section {
     height: 0px; }
     div#leftToGo-section#hasDone-section div.scale-meter, div#hasDone-section#hasDone-section div.scale-meter {
+      position: absolute;
+      top: 0;
+      height: auto;
       border-top-width: 2px; }
 
 /* other SVG elements */
