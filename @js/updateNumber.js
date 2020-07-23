@@ -38,7 +38,7 @@ function redraw_graph() {
 //				}
 //	});
 ////	
-	var timeJsonURL = "http://3.34.208.197/crawling";
+	var timeJsonURL = "//3.34.208.197/crawling";
 	$.getJSON( timeJsonURL, function(data) {
 		
 		number_hasDone = data.count_hasDone;
