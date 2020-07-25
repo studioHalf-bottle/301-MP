@@ -100,6 +100,8 @@ a { color: $textColour !important; text-decoration: /*dashed*/ underline; text-d
 span.number-hasDone, span.number-left, span.bold { font-weight: 700; }
 span.upper-annotation { font-size: 0.66em; vertical-align: 0.25em; }
 
+p.notice { font-size: 0.7rem; padding: 1rem 0 3rem; }
+
 p.main-paragraph { font-size: 1rem; padding: 1em 0; }
 
 div#shareButton-container {}
@@ -205,7 +207,7 @@ div#goToSignButton-container {
 	display: inline-block; text-align: center; 
 	width: $ratio-9-12; max-width: 16rem;
 	@media (min-width: 768px) { width: $ratio-6-12; } 
-	margin-bottom: 2rem;
+	margin-bottom: 0rem;
 	
 	margin-top: 0rem; 
 	@media (min-width: 576px) { margin-top: 0rem; }

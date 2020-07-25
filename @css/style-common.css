@@ -74,6 +74,10 @@ span.upper-annotation {
   font-size: 0.66em;
   vertical-align: 0.25em; }
 
+p.notice {
+  font-size: 0.7rem;
+  padding: 1rem 0 3rem; }
+
 p.main-paragraph {
   font-size: 1rem;
   padding: 1em 0; }
@@ -204,7 +208,7 @@ div#goToSignButton-container {
   text-align: center;
   width: 75%;
   max-width: 16rem;
-  margin-bottom: 2rem;
+  margin-bottom: 0rem;
   margin-top: 0rem; }
   @media (min-width: 768px) {
     div#goToSignButton-container {
