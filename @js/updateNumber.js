@@ -29,8 +29,10 @@ function redraw_graph() {
 		number_hasDone = data.count_hasDone;
 		number_left = number_toGo - number_hasDone;
 		
-		currentTime = new Date(data.time);
-		days_left = days_left_constant - currentTime.getDate() - 31*( currentTime.getMonth()+1-7 );
+//		currentTime = new Date(data.time);
+//		days_left = days_left_constant - currentTime.getDate() - 31*( currentTime.getMonth()+1-7 );
+		currentTime = new Date('02 Aug 2020 00:00:00');
+		days_left = 0;
 		
 		
 		$("object#d-day-integer").attr('data', `@asset/image/number-${days_left.toString()}.svg`);
@@ -55,33 +57,6 @@ function redraw_graph() {
 		}, 200 );
 	});
 	
-//	number_hasDone = number_hasDone_nonAutomatic;
-//	number_left = number_toGo - number_hasDone;
-//
-//	currentTime = currentTime_nonAutomatic;
-//	days_left = days_left_constant - currentTime.getDate() - 31*( currentTime.getMonth()+1-7 );
-//
-//
-//	$("object#d-day-integer").attr('data', `@asset/image/number-${days_left.toString()}.svg`);
-//	$("span#currentTime").html( `2020-0${currentTime.getMonth()+1}-${addZero(currentTime.getDate())} ${addZero(currentTime.getHours())}:${addZero(currentTime.getMinutes())}:${addZero(currentTime.getSeconds())}` );
-//
-//
-//
-//	var percent_hasDone = number_hasDone / number_toGo * 100;
-//	var percent_left = number_left / number_toGo * 100;
-//
-//	setTimeout( function() {
-//		$("object#d-day-integer").attr({ width: "", height: ""});
-//
-//		$("div#leftToGo-section").css("height", percent_left+"%"); 
-//		$("div#hasDone-section").css("height", percent_hasDone+"%");
-//		$("span.number-hasDone").each( function(i, ele) {
-//			new CountUp(ele, number_hasDone, countUpJS_options_hasDone).start();
-//		});
-//		$("span.number-left").each( function(i, ele) {
-//			new CountUp(ele, number_left, countUpJS_options_left).start();
-//		});
-//	}, 200 );
 }
 	
 
